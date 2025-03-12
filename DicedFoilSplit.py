@@ -391,9 +391,14 @@ def save_images(cells, output_folder):
             plt.imsave(os.path.join(output_folder, f"{cell_IDs[index]}.jpg"), cell[:,:,::-1])
 
 
+def dicing_lines():
+    # TODO
+    return
+
+
 
 image_folder = Path(r"C:\Users\Public\Python-scripts\diced_foil_align\images")
-image_file = "Au5_30x_ring.jpg"
+image_file = "Au7_30x_ring.jpg"
 side = "DAF"
 imaging = "VHX"
 metal = "Gold"
