@@ -1,0 +1,9 @@
+numpy
+pathlib
+numpy
+matplotlib
+opencv-python
+scikit-learn
+# KMeans
+# GaussianMixture
+

@@ -93,11 +93,11 @@ def image_histogram(img_color, img_gray):
         metal = None
     elif normalized_histograms['blue'][240] > 0.01:
         side = "DAF"
-        imaging = "VHX"
+        imaging = "RW250110 VHX"
         metal = "Gold"
     else:
         side = "DAF"
-        imaging = "VHX"
+        imaging = "RW250110 VHX"
         metal = "Nickel"
 
     image_details = {
@@ -582,10 +582,12 @@ def find_ECA_shingle(cells, scale, dimensions):
     return
 
 
-image_folder = Path(r"C:\Users\Public\Python-scripts\diced_foil_align\images")
-files = ["Au DAF foil Germany 17, 30x ring.jpg"]
-side = "DAF" # DAF or Cell
-imaging = "VHX" # VHX or Coax or Ring
+# image_folder = Path(r"G:\Shared drives\TPV\Cell & Wafer\Characterization\Characterization Reports\D. RW Lots\2025\RW250110\1) Post Processing Data\RW250110 VHX")
+image_folder = Path(r'C:\Users\Isaiah Wilkes\PycharmProjects\diced_foil_align\RW250110 VHX')
+
+files = ["RW250110 W3, 30X.jpg", "RW250110 W4, 30X.jpg"] # can be list for multiple wafer images
+side = "Cell" # DAF or Cell
+imaging = "Coax" # VHX or Coax or Ring
 metal = "Gold" # Gold or Nickel
 
 # scale = 1000/218.875 # um/px # 1 mm = 1000 um = 218.875 px
@@ -600,6 +602,7 @@ non_cells = [1, 2, 3, 7, 8, 9, 10, 16, 17, 24, 73, 80, 81, 88, 89, 90, 95, 96] #
 # ejected = [5, 6, 13, 14, 15, 21, 22, 23, 29, 30, 31, 32, 37, 38, 39, 40]
 # non_cells += ejected
 cell_IDs = [
+    "04D", "04E", "04F", "04G", "04H", "04I", "04J", "04K" # row 4 can be commented out if row is cut off
     "05D", "05E", "05F", "05G", "05H", "05I", "05J", "05K",
     "06D", "06E", "06F", "06G", "06H", "06I", "06J", "06K",
     "07D", "07E", "07F", "07G", "07H", "07I", "07J", "07K",
